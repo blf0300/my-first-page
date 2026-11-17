@@ -14,6 +14,7 @@
 .modal{position:fixed;inset:0;background:#13231d70;z-index:5;display:none;align-items:center;justify-content:center;padding:16px}.modal.open{display:flex}.dialog{width:min(480px,100%);background:#fff;border-radius:17px;padding:22px;box-shadow:0 22px 70px #101b1770}.dialog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.dialog-head h2{font-size:18px;margin:0}.close{border:0;background:#f2f4f2;color:#66736c;width:30px;height:30px;border-radius:8px;font-size:17px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-field{display:grid;gap:5px}.form-field.full{grid-column:1/-1}.form-field label{font-size:11px;font-weight:700;color:#59675f}.form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 10px;outline-color:#8aaf99;background:#fff;font-size:12px}.form-field textarea{resize:vertical;min-height:68px}.form-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:17px}.secondary{border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px 13px;color:#69756f;font-size:12px}.dialog .primary{padding:9px 14px;font-size:12px}
 @media(max-width:1000px){.sidebar{width:190px}.main{margin-left:190px;padding:24px}.project-meta{gap:10px}.progress-wrap{width:100px}}
 @media(max-width:740px){.sidebar{position:static;width:auto;height:auto;padding:12px 15px;border-right:0;border-bottom:1px solid var(--line);flex-direction:row;align-items:center;justify-content:space-between}.logo{padding:0}.workspace,.nav,.side-bottom{display:none}.main{margin:0;padding:18px 15px 42px}.topline{margin-bottom:21px}.hero-row{align-items:flex-start;flex-direction:column;margin-bottom:18px}.hero-row .primary{width:100%}.project-strip{padding:12px;flex-wrap:wrap}.project-info p{max-width:205px}.project-meta{width:100%;justify-content:space-between;padding:8px 0 0 48px;border-top:1px solid #f0f2f0}.progress-wrap{width:90px}.stats{grid-template-columns:repeat(2,1fr);gap:8px}.stat{padding:11px 12px}.stat b{font-size:20px}.toolbar{align-items:flex-start;flex-direction:column}.tools{width:100%}.search{flex:1}.search input{width:100%}.filter{min-width:98px}.board{grid-template-columns:1fr;gap:10px}.column{min-height:unset}.column:not(:has(.task)){min-height:102px}.cards{grid-template-columns:1fr}.privacy{text-align:center}.form-grid{grid-template-columns:1fr}.form-field.full{grid-column:auto}}
+.tagline{font-size:11px;color:#7f8b84}.page-heading{margin:12px 0 22px}.page-heading h1{font-size:clamp(25px,3vw,34px);letter-spacing:-.04em;margin:7px 0 5px}.home-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:17px}.home-stat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:18px;box-shadow:var(--shadow)}.home-stat span,.home-stat small{display:block;color:var(--muted);font-size:11px}.home-stat b{display:block;font-size:28px;margin:7px 0 2px}.home-project{display:flex;align-items:center;gap:14px;padding:16px 18px;margin-bottom:15px}.home-project .project-info{flex:1}.home-project-progress{color:var(--green);font-size:11px;font-weight:700;white-space:nowrap}.home-mine{padding:18px}.home-section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.home-section-title h2{font-size:15px;margin:0}.home-section-title p{font-size:11px;color:var(--muted);margin:3px 0 0}.text-button{border:0;background:transparent;color:var(--green);font-size:11px;font-weight:700}.home-task-list{display:grid}.home-task{display:flex;align-items:center;gap:11px;border-top:1px solid #f0f2f0;padding:12px 2px}.home-task-main{flex:1;min-width:0}.home-task-main b{display:block;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.home-task-main small{font-size:10px;color:var(--muted)}.home-task-due{font-size:10px;color:#77847d;white-space:nowrap}.home-task-due.late{color:#c36a52;font-weight:700}.task-state{font-size:9px;border-radius:5px;background:#eef3f9;padding:4px 7px;color:#5c7599;white-space:nowrap}.settings-panel{padding:22px;max-width:650px;display:grid;grid-template-columns:44px 1fr;gap:0 13px}.settings-icon{width:40px;height:40px;border-radius:12px;background:var(--mint);color:var(--green);display:grid;place-items:center;font-size:18px}.settings-copy h2{font-size:14px;margin:1px 0 3px}.settings-copy p{font-size:11px;color:var(--muted);margin:0}.settings-panel form{grid-column:2;display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:17px}.settings-panel form label{font-size:11px;font-weight:700}.settings-panel select{height:38px;border:1px solid var(--line);border-radius:8px;padding:0 10px;background:white;min-width:145px;color:var(--ink)}.settings-panel .primary{padding:9px 13px;font-size:11px}.settings-panel form #settings-saved{flex-basis:100%;color:var(--green);font-size:10px;margin:0;min-height:15px}
 </style>
 </head>
 <body>
@@ -21,10 +22,28 @@
 <aside class="sidebar">
 <div class="logo"><span class="logo-icon">▦</span><span>チームボード</span></div>
 <div class="workspace">WORKSPACE</div>
-<nav class="nav"><button><span class="ico">⌂</span>ホーム</button><button class="active"><span class="ico">▦</span>プロジェクト</button><button><span class="ico">◷</span>自分のタスク</button><button><span class="ico">⚙</span>設定</button></nav>
-<div class="side-bottom"><span class="avatar">山</span><span>山田 花子<br><small>チームメンバー</small></span></div>
+<nav class="nav" aria-label="メインメニュー"><button type="button" data-view="home"><span class="ico">⌂</span>ホーム</button><button type="button" class="active" data-view="project"><span class="ico">▦</span>プロジェクト</button><button type="button" data-view="tasks"><span class="ico">◷</span>自分のタスク</button><button type="button" data-view="settings"><span class="ico">⚙</span>設定</button></nav>
+<div class="side-bottom"><span class="avatar" id="member-avatar">山</span><span id="member-label">山田 花子<br><small>チームメンバー</small></span></div>
 </aside>
 <main class="main">
+<section class="page-view home-view" id="home-view" hidden>
+<div class="topline"><div class="crumb">ワークスペース　/　<strong>ホーム</strong></div><div class="top-actions"><span class="tagline">チームの状況をひと目で確認</span></div></div>
+<div class="page-heading"><div class="eyebrow">WORKSPACE HOME</div><h1>チームの進み具合をチェック。</h1><p class="subtitle">プロジェクトの状況と、あなたのタスクをまとめて確認できます。</p></div>
+<div class="home-stats">
+<div class="home-stat"><span>進行中のプロジェクト</span><b>1</b><small>社内ポータル刷新</small></div>
+<div class="home-stat"><span>チーム全体のタスク</span><b id="home-total">0</b><small>登録されているタスク</small></div>
+<div class="home-stat"><span>自分の未完了タスク</span><b id="home-mine">0</b><small id="home-user-label">山田 花子さんの担当</small></div>
+</div>
+<section class="panel home-project"><div class="project-mark">▤</div><div class="project-info"><b>社内ポータル刷新</b><p>チームの情報共有をひとつにまとめるプロジェクト</p></div><span class="home-project-progress" id="home-progress">進捗 —%</span><button type="button" class="secondary" data-view="project">プロジェクトを開く</button></section>
+<section class="panel home-mine"><div class="home-section-title"><div><h2>自分のタスク</h2><p>期限が近い順に表示</p></div><button type="button" class="text-button" data-view="tasks">すべて見る →</button></div><div id="home-task-list" class="home-task-list"></div></section>
+</section>
+<section class="page-view settings-view" id="settings-view" hidden>
+<div class="topline"><div class="crumb">ワークスペース　/　<strong>設定</strong></div></div>
+<div class="page-heading"><div class="eyebrow">PREFERENCES</div><h1>表示設定</h1><p class="subtitle">このブラウザで使うメンバーを選びます。</p></div>
+<section class="panel settings-panel"><div class="settings-icon">⚙</div><div class="settings-copy"><h2>現在のメンバー</h2><p>「自分のタスク」に表示する担当者を設定します。</p></div><form id="settings-form"><label for="profile-select">メンバー</label><select id="profile-select"><option>山田 花子</option><option>佐藤 健</option><option>鈴木 葵</option><option>田中 誠</option></select><button class="primary" type="submit">設定を保存</button><p id="settings-saved" role="status"></p></form></section>
+<div class="privacy">メンバー設定とタスクは、このブラウザ内に保存されます。</div>
+</section>
+<div id="project-view" class="page-view"> 
 <div class="topline"><div class="crumb">ワークスペース　/　<strong>プロジェクト</strong></div><div class="top-actions"><button class="icon-btn" aria-label="通知">♧</button><button class="icon-btn" aria-label="ヘルプ">?</button></div></div>
 <section class="hero-row"><div><div class="eyebrow">PROJECT OVERVIEW</div><h1>プロジェクトを、チームで前へ。</h1><p class="subtitle">担当・期限・進捗をひとつの場所で共有できます。</p></div><button class="primary" id="open-modal"><span class="plus">＋</span>タスクを追加</button></section>
 <section class="project-strip">
@@ -45,6 +64,7 @@
 <div class="column" data-status="完了"><div class="column-head"><div class="column-name"><i></i>完了</div><span class="count">0</span></div><div class="cards"></div></div>
 </div>
 </section><div class="privacy">このページのタスクは、このブラウザ内に保存されます。</div>
+</div>
 </main>
 </div>
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="form-title"><form class="dialog" id="task-form">
@@ -58,7 +78,9 @@
 <div class="form-field"><label for="task-status">ステータス</label><select id="task-status"><option>未着手</option><option>進行中</option><option>完了</option></select></div>
 </div><div class="form-actions"><button type="button" class="secondary" id="cancel">キャンセル</button><button class="primary" type="submit">タスクを保存</button></div></form></div>
 <script>
-const KEY="teamboard-idea1-v1";
+const KEY="teamboard-idea1-v1", PROFILE_KEY="teamboard-idea1-profile";
+const members=["山田 花子","佐藤 健","鈴木 葵","田中 誠"];
+let currentUser=localStorage.getItem(PROFILE_KEY)||members[0];if(!members.includes(currentUser))currentUser=members[0];
 const seed=[
 {id:1,title:"要件と情報構造を整理",desc:"各部署へのヒアリング内容をまとめる",owner:"山田 花子",due:"2026-12-02",priority:"高",status:"完了"},
 {id:2,title:"トップページのワイヤーフレーム",desc:"主要な導線と掲載情報を設計する",owner:"佐藤 健",due:"2026-12-05",priority:"高",status:"進行中"},
@@ -77,7 +99,29 @@ function render(){
  document.getElementById("total-stat").textContent=tasks.length;document.getElementById("todo-stat").textContent=counts["未着手"];document.getElementById("doing-stat").textContent=counts["進行中"];document.getElementById("done-stat").textContent=counts["完了"];
  const pct=tasks.length?Math.round(counts["完了"]/tasks.length*100):0;document.getElementById("progress-label").textContent="プロジェクト進捗　"+pct+"%";document.getElementById("progress-bar").style.width=pct+"%";
  document.querySelectorAll(".column").forEach(col=>{const status=col.dataset.status,wrap=col.querySelector(".cards");const list=tasks.filter(t=>t.status===status&&(!owner||t.owner===owner)&&(!q||(t.title+" "+t.desc+" "+t.owner).toLowerCase().includes(q)));col.querySelector(".count").textContent=list.length;wrap.innerHTML=list.length?list.map(t=>{const late=t.due&&new Date(t.due+"T23:59:59")<new Date()&&t.status!=="完了";const priorityClass=t.priority==="高"?"high":t.priority==="中"?"medium":"";return '<article class="task"><p class="task-title">'+esc(t.title)+'</p>'+(t.desc?'<p class="task-desc">'+esc(t.desc)+'</p>':'')+'<div class="labels"><span class="label '+priorityClass+'">優先度：'+esc(t.priority)+'</span></div><div class="task-foot"><span class="owner"><i>'+esc(t.owner.slice(0,1))+'</i>'+esc(t.owner)+'</span><span class="due '+(late?"late":"")+'">▧ '+(late?"期限超過 · ":"")+dateLabel(t.due)+'</span></div><div class="task-controls"><select aria-label="ステータスを変更" data-id="'+t.id+'"><option '+(t.status==="未着手"?"selected":"")+'>未着手</option><option '+(t.status==="進行中"?"selected":"")+'>進行中</option><option '+(t.status==="完了"?"selected":"")+'>完了</option></select><button class="delete" data-delete="'+t.id+'" aria-label="タスクを削除">削除</button></div></article>'}).join(""):'<div class="empty">該当するタスクはありません</div>'});
+ renderHome();
 }
+function renderHome(){
+ const mine=tasks.filter(t=>t.owner===currentUser&&t.status!=="完了").sort((a,b)=>(a.due||"9999").localeCompare(b.due||"9999"));
+ const pct=tasks.length?Math.round(tasks.filter(t=>t.status==="完了").length/tasks.length*100):0;
+ document.getElementById("home-total").textContent=tasks.length;
+ document.getElementById("home-mine").textContent=mine.length;
+ document.getElementById("home-user-label").textContent=currentUser+"さんの担当";
+ document.getElementById("home-progress").textContent="進捗 "+pct+"%";
+ document.getElementById("home-task-list").innerHTML=mine.length?mine.slice(0,5).map(t=>{const late=t.due&&new Date(t.due+"T23:59:59")<new Date();return '<div class="home-task"><span class="task-state">'+esc(t.status)+'</span><div class="home-task-main"><b>'+esc(t.title)+'</b><small>優先度：'+esc(t.priority)+'</small></div><span class="home-task-due '+(late?"late":"")+'">'+(late?"期限超過 · ":"")+dateLabel(t.due)+'</span></div>'}).join(""):'<div class="empty">未完了の担当タスクはありません</div>';
+}
+function setView(view){
+ document.querySelectorAll(".page-view").forEach(panel=>panel.hidden=panel.id!==(view==="tasks"?"project-view":view==="project"?"project-view":view+"-view"));
+ document.querySelectorAll(".nav [data-view]").forEach(button=>button.classList.toggle("active",button.dataset.view===view||view==="tasks"&&button.dataset.view==="tasks"));
+ document.getElementById("owner-filter").value=view==="tasks"?currentUser:"";
+ document.getElementById("search").value="";
+ document.getElementById("member-avatar").textContent=currentUser.slice(0,1);
+ document.getElementById("member-label").innerHTML=esc(currentUser)+'<br><small>チームメンバー</small>';
+ render();
+}
+document.querySelectorAll("[data-view]").forEach(button=>button.addEventListener("click",()=>setView(button.dataset.view)));
+document.getElementById("profile-select").value=currentUser;
+document.getElementById("settings-form").addEventListener("submit",event=>{event.preventDefault();currentUser=document.getElementById("profile-select").value;try{localStorage.setItem(PROFILE_KEY,currentUser)}catch{};document.getElementById("settings-saved").textContent="設定を保存しました";document.getElementById("member-avatar").textContent=currentUser.slice(0,1);document.getElementById("member-label").innerHTML=esc(currentUser)+'<br><small>チームメンバー</small>';renderHome();document.getElementById("home-user-label").textContent=currentUser+"さんの担当";});
 const modal=document.getElementById("modal");function closeModal(){modal.classList.remove("open")}
 document.getElementById("open-modal").onclick=()=>{document.getElementById("task-form").reset();modal.classList.add("open");setTimeout(()=>document.getElementById("task-name").focus(),0)};
 document.getElementById("close-modal").onclick=closeModal;document.getElementById("cancel").onclick=closeModal;modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
